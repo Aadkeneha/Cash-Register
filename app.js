@@ -21,12 +21,13 @@ next.addEventListener("click",function showsection(){
 
     }
     else{
-        if(typeof billAmount.value === "string"){
-            showmsg("Please enter a valid input number"); 
+        if(billAmount.value <= 0){
+            showmsg("The cash given should be greater than zero.");
+            
         }
         else{
 
-            showmsg("The cash given should be greater than zero."); 
+            showmsg("Please enter a valid input number"); 
 
         }
          
@@ -54,12 +55,13 @@ function Calculatecash(){
 
     }
     else{
-        if(typeof billAmount.value === 'string'){
-            showmsg("Please enter a valid input number"); 
+        if(billAmount.value <= 0){
+            showmsg("The cash given should be greater than zero.");
+            
         }
         else{
 
-            showmsg("The cash given should be greater than zero."); 
+            showmsg("Please enter a valid input number"); 
 
         }
          
