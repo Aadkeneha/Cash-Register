@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cash-Register</title>
+</head>
+<body>
+    
+    <h1 class="heading">Cash-Register</h1>
+    <p class="desc">Cash Register is for calculating the number of notes to returned as change.</p>
+
+    <label for="billamt">Bill Amount</label>
+    <input type="text" id="billamt">
+
+    <label for="cashamt">Cash Given</label>
+    <input type="text" id="cashamt">
+
+    <button id="btn-calculate">Calculate</button>
+
+    <p id="msg-error"></p>
+
+    <table class="table-change">
+        <tr>
+            <th>Number of notes/coin to be given:</th>
+            <td class="change"></td>
+            <td class="change"></td>
+            <td class="change"></td>
+            <td class="change"></td>
+            <td class="change"></td>
+            <td class="change"></td>
+            <td class="change"></td>
+            <td class="change"></td>
+            <td class="change"></td>
+        </tr>
+        <tr>
+            <th>Change in Rupees:</th>
+            <td>2000</td>
+            <td>1000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>50</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+</body>
+<script src="app.js" type="text/javascript"></script>
+</html>
