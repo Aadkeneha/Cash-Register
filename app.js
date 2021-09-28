@@ -2,18 +2,44 @@ var billAmount = document.querySelector("#billamt");
 var cashGiven = document.querySelector("#cashamt");
 const msg = document.querySelector("#msg-error");
 var list_change = document.querySelectorAll(".change");
-
-
+const next = document.querySelector("#btn-next");
 const calculate = document.querySelector("#btn-calculate");
+
+var billvsection = document.querySelector(".billvalid");
+var table = document.querySelector(".table-display");
+
+hidden();
 
 const notes = [2000,1000,500,100,50,20,10,5,1];
 
-calculate.addEventListener("click",Calculatecash)
+next.addEventListener("click",function showsection(){
+    hiddenmsg();
+    if(billAmount.value > 0){
+        billvsection.style.display="block";
+
+        calculate.addEventListener("click",Calculatecash)
+
+    }
+    else{
+        if(typeof billAmount.value === 'string'){
+            showmsg("Please enter a valid input number"); 
+        }
+        else{
+
+            showmsg("The cash given should be greater than or equal to bill amount."); 
+
+        }
+         
+    }
+    
+
+})
+
+
 
 function Calculatecash(){
-    msg.style.display="none";
-    if (billAmount.value > 0){
-    
+    hiddenmsg();
+
         if(Number(cashGiven.value) >= Number(billAmount.value)){
             const returnamt = cashGiven.value - billAmount.value;
             Calculatechange(returnamt);
@@ -24,10 +50,6 @@ function Calculatecash(){
             showmsg("The cash given should be greater than or equal to bill amount.");
 
         }
-    }
-    else{
-        showmsg("The bill amount should be greater than zero.")
-    }
     
 
 }
@@ -43,4 +65,15 @@ function Calculatechange(returnamt){
         returnamt = returnamt %  notes[i];
         list_change[i].innerText= no_of_notes;
     }
+    table.style.display="block";
+}
+
+function hiddenmsg(){
+    msg.style.display="none";
+}
+
+function hidden(){
+
+    billvsection.style.display="none";
+    table.style.display="none";
 }
