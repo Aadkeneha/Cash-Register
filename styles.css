@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+*{
+    font-family: 'Arvo', serif;
+}
+
+:root{
+    --primary-color:#10B981;
+    --letter-color: black;
+}
+
+
+body{
+    margin:auto;
+    margin-top:5rem;
+    border:5px solid var(--primary-color);
+    border-style: double solid;
+    max-width: 38%;
+    border-radius: 2rem;
+}
+
+
+h1{
+    text-align: center;
+    color:var(--letter-color);
+}
+
+p{
+    text-align: center;
+    color:var(--letter-color);
+    margin:2rem;
+}
+
+label{
+    text-align: center;
+    display: block;
+}
+
+input{
+    text-align: center;
+    width: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 0.5rem;
+    font-size: large;
+}
+
+button{
+
+    margin: auto;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #A7F3D0;
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 1px 1px var(--primary-color);
+}
+
+table,th,tr,td{
+    border:1px solid var(--primary-color);
+    margin:auto;
+    margin-bottom:2rem;
+    text-align: center;
+}
+
+td{
+    padding:0.2rem;
+    margin:auto
+}
+
+
