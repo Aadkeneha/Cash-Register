@@ -21,12 +21,12 @@ next.addEventListener("click",function showsection(){
 
     }
     else{
-        if(typeof billAmount.value === 'string'){
+        if(typeof billAmount.value === "string"){
             showmsg("Please enter a valid input number"); 
         }
         else{
 
-            showmsg("The cash given should be greater than or equal to bill amount."); 
+            showmsg("The cash given should be greater than zero."); 
 
         }
          
@@ -39,6 +39,7 @@ next.addEventListener("click",function showsection(){
 
 function Calculatecash(){
     hiddenmsg();
+    if(billAmount.value > 0){
 
         if(Number(cashGiven.value) >= Number(billAmount.value)){
             const returnamt = cashGiven.value - billAmount.value;
@@ -50,6 +51,20 @@ function Calculatecash(){
             showmsg("The cash given should be greater than or equal to bill amount.");
 
         }
+
+    }
+    else{
+        if(typeof billAmount.value === 'string'){
+            showmsg("Please enter a valid input number"); 
+        }
+        else{
+
+            showmsg("The cash given should be greater than zero."); 
+
+        }
+         
+    }
+        
     
 
 }
